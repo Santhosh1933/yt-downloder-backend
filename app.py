@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory, url_for
+from flask_cors import CORS
 from pytube import YouTube
 from pytube.exceptions import RegexMatchError
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -9,6 +10,7 @@ import tempfile
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Create a temporary directory for downloads
 download_dir = tempfile.mkdtemp()
