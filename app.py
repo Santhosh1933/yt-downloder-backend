@@ -47,7 +47,8 @@ def get_video_qualities():
             'itag': stream.itag,
             'resolution': stream.resolution,
             'mime_type': stream.mime_type,
-            'file_size': get_file_size(stream)
+            'file_size': get_file_size(stream),
+            'url':url
         } for stream in video_streams]
         return jsonify({'title': yt.title, 'qualities': qualities})
     except RegexMatchError:
