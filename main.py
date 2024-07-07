@@ -28,6 +28,10 @@ def get_file_size(stream):
         print(f"Error getting file size: {e}")
         return "Unknown"
 
+@app.route('/')
+def index():
+    return 'Hello, World!'
+
 @app.route('/get_video_qualities', methods=['GET'])
 def get_video_qualities():
     url = request.args.get('url')
