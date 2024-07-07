@@ -1,0 +1,15 @@
+# Python specific
+*.pyc
+__pycache__/
+
+# Flask specific
+instance/
+.env
+
+# Temporary files
+*.log
+*.swp
+
+# Virtual environment
+venv/
+.venv/
